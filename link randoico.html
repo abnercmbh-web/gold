@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fale no Zap</title>
+  <!-- Ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #000000; /* Fundo preto */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #meuBotao button {
+      background-color: #006400; /* Verde escuro */
+      color: white; /* Texto branco */
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px; /* Cantos arredondados */
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Espaço entre ícone e texto */
+    }
+
+    #meuBotao button:hover {
+      background-color: #008000; /* Verde um pouco mais claro no hover */
+    }
+
+    #meuBotao i {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a id="meuBotao" href="#" target="_blank">
+    <button><i class="fab fa-whatsapp"></i> Fale no Zap</button>
+  </a>
+
+  <script>
+    const mensagem = "Olá, vim do Instagram e gostaria de mais informações";
+
+    const links = [
+      "https://wa.me/5531992744241?text=" + encodeURIComponent(mensagem),
+      "https://wa.me/5531990761603?text=" + encodeURIComponent(mensagem),
+      "https://wa.me/5531995829331?text=" + encodeURIComponent(mensagem)
+    ];
+
+    const linkAleatorio = links[Math.floor(Math.random() * links.length)];
+    document.getElementById("meuBotao").href = linkAleatorio;
+  </script>
+</body>
+</html>
